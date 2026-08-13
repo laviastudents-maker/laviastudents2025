@@ -236,6 +236,26 @@
     .links{display:flex;gap:14px;flex-wrap:wrap;color:rgba(255,255,255,.72)}
     .links a:hover{color:white}
     .mini{font-size:13px;color:rgba(255,255,255,.42);margin-top:34px;border-top:1px solid rgba(255,255,255,.10);padding-top:24px}
+
+    /* Updates */
+    .updates-section{background:#F5F1EB;position:relative;overflow:hidden}
+    .updates-section:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(76,91,200,.08);left:-140px;top:-120px}
+    .updates-section .container{position:relative}
+    .updates-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px}
+    .updates-live{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-size:14px;font-weight:700}
+    .updates-live i{width:9px;height:9px;border-radius:50%;background:#2EAD6B;box-shadow:0 0 0 6px rgba(46,173,107,.10)}
+    .updates-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .update-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;min-height:285px;display:flex;flex-direction:column;box-shadow:0 12px 35px rgba(23,27,45,.05)}
+    .update-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+    .update-tag{display:inline-flex;align-items:center;min-height:30px;padding:0 11px;border-radius:999px;background:rgba(76,91,200,.09);color:var(--blue);font-size:12px;font-weight:800}
+    .update-tag.urgent{background:rgba(231,87,79,.10);color:#C7443E}
+    .update-date{font-size:12px;color:var(--muted)}
+    .update-card h3{margin:0 0 11px;color:var(--navy);font-size:20px;line-height:1.65}
+    .update-card p{margin:0 0 22px;color:var(--muted);font-size:14px;line-height:1.9}
+    .update-audience{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:#6B6F7D}
+    .update-link{display:inline-flex;align-items:center;gap:7px;margin-top:15px;color:var(--blue);font-size:13px;font-weight:800}
+    .updates-empty{grid-column:1/-1;background:#fff;border:1px dashed rgba(76,91,200,.25);border-radius:22px;padding:30px;text-align:center;color:var(--muted)}
+    .updates-note{margin:22px 0 0;color:#777B89;font-size:12px;line-height:1.9}
     @media (max-width:900px){
       .nav-links{display:none}
       .nav-inner{height:58px}
@@ -244,7 +264,7 @@
       .section-head{display:block}
       .section-head p{margin-top:12px}
       .split,.italy-grid,.booking{grid-template-columns:1fr}
-      .feature-grid,.path-card,.services-list{grid-template-columns:1fr}
+      .feature-grid,.path-card,.services-list,.updates-grid{grid-template-columns:1fr}
       .image-frame{min-height:420px}
       .photo-grid{transform:none}
       form{grid-template-columns:1fr}
@@ -279,6 +299,7 @@
       <div class="nav-links">
         <a href="#language">دراسة اللغة</a>
         <a href="#services">الخدمات</a>
+        <a href="#updates">آخر التحديثات</a>
         <a href="#italy">وجودنا في إيطاليا</a>
         <a href="#booking">استشارة</a>
       </div>
@@ -405,6 +426,24 @@
     </div>
   </section>
 
+
+  <section class="updates-section" id="updates">
+    <div class="container">
+      <div class="section-head">
+        <h2>آخر التحديثات</h2>
+        <p>أهم التغييرات الرسمية التي قد تؤثر على التسجيل، التأشيرة، الجامعة أو بداية الدراسة في إيطاليا — نعرض المهم فقط وبمصدره الرسمي.</p>
+      </div>
+      <div class="updates-toolbar">
+        <div class="updates-live"><i></i><span>متابعة المصادر الرسمية</span></div>
+        <span style="font-size:13px;color:var(--muted)">يتم ترتيب التحديثات من الأحدث إلى الأقدم</span>
+      </div>
+      <div class="updates-grid" id="updatesGrid">
+        <div class="updates-empty">جاري تحميل آخر التحديثات…</div>
+      </div>
+      <p class="updates-note">المعلومات هنا للتنبيه والمتابعة. القرار النهائي والمتطلبات المعتمدة تبقى وفق الجهة الرسمية والجامعة المختارة وحالة كل طالب.</p>
+    </div>
+  </section>
+
   <section class="italy" id="italy">
     <div class="container italy-grid">
       <div>
@@ -522,6 +561,38 @@
       <div class="mini">© 2026 La Via. All rights reserved.</div>
     </div>
   </footer>
+
+
+  <script>
+    (async function loadUpdates(){
+      const grid = document.getElementById('updatesGrid');
+      if (!grid) return;
+      const escapeHtml = (value='') => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+      try {
+        const response = await fetch('/data/updates.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Updates unavailable');
+        const updates = await response.json();
+        const visible = updates.filter(item => item.published !== false).slice(0, 6);
+        if (!visible.length) {
+          grid.innerHTML = '<div class="updates-empty">لا توجد تحديثات جديدة تتطلب إجراءً حاليًا.</div>';
+          return;
+        }
+        grid.innerHTML = visible.map(item => `
+          <article class="update-card">
+            <div class="update-meta">
+              <span class="update-tag ${item.urgent ? 'urgent' : ''}">${escapeHtml(item.category)}</span>
+              <time class="update-date">${escapeHtml(item.date)}</time>
+            </div>
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(item.summary)}</p>
+            <div class="update-audience">${escapeHtml(item.audience || '')}</div>
+            <a class="update-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">المصدر الرسمي ↗</a>
+          </article>`).join('');
+      } catch (error) {
+        grid.innerHTML = '<div class="updates-empty">تعذر تحميل التحديثات الآن. يمكنك المحاولة لاحقًا.</div>';
+      }
+    })();
+  </script>
 
   <script>
     const contactEmail = "laviastudents@gmail.com";
