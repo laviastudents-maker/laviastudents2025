@@ -1,0 +1,306 @@
+[
+  {
+    "id": "universitaly-first-steps",
+    "name": "Universitaly — Pre-enrolment",
+    "type": "central",
+    "category": "Universitaly",
+    "priority": "critical",
+    "url": "https://www.universitaly.it/it/first-steps"
+  },
+  {
+    "id": "mur-international-students",
+    "name": "MUR — International Students",
+    "type": "central",
+    "category": "General",
+    "priority": "critical",
+    "url": "https://www.mur.gov.it/it/aree-tematiche/universita/mobilita-internazionale/studenti-entrata-internazionali"
+  },
+  {
+    "id": "mur-news",
+    "name": "MUR — University News",
+    "type": "central",
+    "category": "General",
+    "priority": "high",
+    "url": "https://www.mur.gov.it/it/news"
+  },
+  {
+    "id": "study-in-italy",
+    "name": "Study in Italy",
+    "type": "central",
+    "category": "General",
+    "priority": "high",
+    "url": "https://studyinitaly.esteri.it/"
+  },
+  {
+    "id": "visa-for-italy",
+    "name": "Visa for Italy",
+    "type": "central",
+    "category": "Visa",
+    "priority": "critical",
+    "url": "https://vistoperitalia.esteri.it/home/en"
+  },
+  {
+    "id": "embassy-tel-aviv",
+    "name": "Italian Embassy Tel Aviv — Study Visa",
+    "type": "embassy",
+    "category": "Visa",
+    "priority": "critical",
+    "url": "https://ambtelaviv.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/visti-studio-procedura-per-limmatricolazione-e-visti-anno-accademico-2025-2026/"
+  },
+  {
+    "id": "interno-permesso",
+    "name": "Ministero Interno — Visa & Permesso",
+    "type": "immigration",
+    "category": "Residence",
+    "priority": "critical",
+    "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno"
+  },
+  {
+    "id": "interno-sui",
+    "name": "Ministero Interno — Sportello Unico Immigrazione",
+    "type": "immigration",
+    "category": "Immigration",
+    "priority": "critical",
+    "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/sportello-unico-limmigrazione"
+  },
+  {
+    "id": "portale-immigrazione",
+    "name": "Portale Immigrazione",
+    "type": "immigration",
+    "category": "Residence",
+    "priority": "critical",
+    "url": "https://www.portaleimmigrazione.it/"
+  },
+  {
+    "id": "prefettura-roma",
+    "name": "Prefettura Roma — SUI",
+    "type": "immigration",
+    "category": "Immigration",
+    "priority": "high",
+    "url": "https://prefettura.interno.gov.it/it/prefetture/roma/area-4-bis-sportello-unico-immigrazione"
+  },
+  {
+    "id": "prefettura-napoli",
+    "name": "Prefettura Napoli — SUI",
+    "type": "immigration",
+    "category": "Immigration",
+    "priority": "high",
+    "url": "https://prefettura.interno.gov.it/it/prefetture/napoli/sportello-unico-limmigrazione"
+  },
+  {
+    "id": "prefettura-trieste",
+    "name": "Prefettura Trieste — SUI",
+    "type": "immigration",
+    "category": "Immigration",
+    "priority": "normal",
+    "url": "https://prefettura.interno.gov.it/it/prefetture/trieste/sportello-unico-limmigrazione"
+  },
+  {
+    "id": "polimi",
+    "name": "Politecnico di Milano — Foreign Qualification",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree"
+  },
+  {
+    "id": "polimi-visa",
+    "name": "Politecnico di Milano — Student Visa",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/how-to-apply-for-a-student-visa"
+  },
+  {
+    "id": "polito",
+    "name": "Politecnico di Torino — Foreign Qualification",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.polito.it/didattica/iscriversi-studiare-laurearsi/iscrizione/corsi-di-laurea/studenti-con-titolo-estero"
+  },
+  {
+    "id": "unibo",
+    "name": "University of Bologna — Non-EU Enrolment",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country"
+  },
+  {
+    "id": "unipd",
+    "name": "University of Padua — International Admissions",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.unipd.it/en/ammissione-studenti-internazionali"
+  },
+  {
+    "id": "sapienza",
+    "name": "Sapienza — International Student Office",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.uniroma1.it/en/node/24774"
+  },
+  {
+    "id": "unito",
+    "name": "University of Turin — International Application",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://en.unito.it/studying-unito/international-degree-seeking-students/application-international-students"
+  },
+  {
+    "id": "unifi",
+    "name": "University of Florence — International Students",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.unifi.it/en/study-us/your-learning-path/start-your-enrolment/international-students"
+  },
+  {
+    "id": "unipi",
+    "name": "University of Pisa — International Students",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.unipi.it/en/international-students/"
+  },
+  {
+    "id": "unipv",
+    "name": "University of Pavia — How to Apply",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://en.unipv.it/en/education/bachelors-and-masters-degree-programs/how-apply"
+  },
+  {
+    "id": "unitn",
+    "name": "University of Trento — Admissions",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.unitn.it/en/admission-courses-taught-italian"
+  },
+  {
+    "id": "unive",
+    "name": "Ca' Foscari — International Qualification",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://www.unive.it/pag/12512/?L=1"
+  },
+  {
+    "id": "unige",
+    "name": "University of Genoa — International Deadlines",
+    "type": "university",
+    "category": "University",
+    "priority": "high",
+    "url": "https://unige.it/internazionale/iscrizioni-internazionali/scadenze"
+  },
+  {
+    "id": "unimi",
+    "name": "University of Milan — International",
+    "type": "university",
+    "category": "University",
+    "priority": "normal",
+    "url": "https://www.unimi.it/en/international/coming-abroad"
+  },
+  {
+    "id": "univr",
+    "name": "University of Verona — International",
+    "type": "university",
+    "category": "University",
+    "priority": "normal",
+    "url": "https://www.univr.it/en/our-services/international-students"
+  },
+  {
+    "id": "units",
+    "name": "University of Trieste — International",
+    "type": "university",
+    "category": "University",
+    "priority": "normal",
+    "url": "https://portale.units.it/en/international/students"
+  },
+  {
+    "id": "unina",
+    "name": "Federico II Naples — International",
+    "type": "university",
+    "category": "University",
+    "priority": "normal",
+    "url": "https://www.international.unina.it/"
+  },
+  {
+    "id": "roma3",
+    "name": "Roma Tre — International",
+    "type": "university",
+    "category": "University",
+    "priority": "normal",
+    "url": "https://www.uniroma3.it/en/international/"
+  },
+  {
+    "id": "unisi",
+    "name": "University of Siena — International",
+    "type": "university",
+    "category": "University",
+    "priority": "normal",
+    "url": "https://en.unisi.it/international"
+  },
+  {
+    "id": "unipg",
+    "name": "University of Perugia — International",
+    "type": "university",
+    "category": "University",
+    "priority": "normal",
+    "url": "https://www.unipg.it/en/international-students"
+  },
+  {
+    "id": "iuav",
+    "name": "IUAV Venice — International",
+    "type": "university",
+    "category": "University",
+    "priority": "normal",
+    "url": "https://www.iuav.it/en/study/international-students"
+  },
+  {
+    "id": "dsu-toscana",
+    "name": "DSU Toscana — Scholarship",
+    "type": "scholarship",
+    "category": "Scholarship",
+    "priority": "critical",
+    "url": "https://www.dsu.toscana.it/borsa-di-studio"
+  },
+  {
+    "id": "aliseo",
+    "name": "ALiSEO Liguria — Scholarship",
+    "type": "scholarship",
+    "category": "Scholarship",
+    "priority": "critical",
+    "url": "https://www.aliseo.liguria.it/benefici-economici-universitari/borsa-di-studio-universitaria/"
+  },
+  {
+    "id": "ergo",
+    "name": "ER.GO Emilia-Romagna — Calls",
+    "type": "scholarship",
+    "category": "Scholarship",
+    "priority": "critical",
+    "url": "https://www.er-go.it/cosa-fare-per/bandi-di-concorso/leggi-il-bando"
+  },
+  {
+    "id": "edisu",
+    "name": "EDISU Piemonte",
+    "type": "scholarship",
+    "category": "Scholarship",
+    "priority": "critical",
+    "url": "https://www.edisu.piemonte.it/"
+  },
+  {
+    "id": "disco",
+    "name": "DiSCo Lazio",
+    "type": "scholarship",
+    "category": "Scholarship",
+    "priority": "critical",
+    "url": "https://www.laziodisco.it/"
+  }
+]
