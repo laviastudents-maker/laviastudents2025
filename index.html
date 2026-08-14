@@ -569,8 +569,15 @@
       if (!grid) return;
       const escapeHtml = (value='') => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
       try {
-        const response = await fetch('/data/updates.json', { cache: 'no-store' });
-        if (!response.ok) throw new Error('Updates unavailable');
+        let response = await fetch('/.netlify/functions/get-updates', { cache: 'no-store' });
+
+if (!response.ok) {
+  response = await fetch('/data/updates.json', { cache: 'no-store' });
+}
+
+if (!response.ok) {
+  throw new Error('Updates unavailable');
+}
         const updates = await response.json();
         const visible = updates.filter(item => item.published !== false).slice(0, 6);
         if (!visible.length) {
